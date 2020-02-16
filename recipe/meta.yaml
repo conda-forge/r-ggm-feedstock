@@ -1,4 +1,4 @@
-{% set version = '2.3' %}
+{% set version = "2.5" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -13,11 +13,11 @@ source:
     - https://cran.r-project.org/src/contrib/ggm_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/ggm/ggm_{{ version }}.tar.gz
 
-  sha256: 832ffe81ff87c6f1a6644e689ebbfb172924b4c4584ac8108d1244d153219ed8
+  sha256: b1a153c9f6c036f364a0561dd4e22039d40ed75eb5e8e91bf0cd0b39c5348c87
 
 build:
   noarch: generic
-  number: 1001
+  number: 0
 
   rpaths:
     - lib/R/lib/
