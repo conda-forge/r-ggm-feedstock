@@ -17,7 +17,7 @@ source:
 
 build:
   noarch: generic
-  number: 1001
+  number: 1002
 
   rpaths:
     - lib/R/lib/
@@ -39,7 +39,7 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=ggm
-  license: GPL (>= 2)
+  license: GPL-2.0-or-later
   summary: Functions and datasets for maximum likelihood fitting of some classes of graphical
     Markov models.
   license_family: GPL3
