@@ -3,7 +3,7 @@ About r-ggm
 
 Home: https://CRAN.R-project.org/package=ggm
 
-Package license: GPL (>= 2)
+Package license: GPL-2.0-or-later
 
 Feedstock license: BSD 3-Clause
 
@@ -116,11 +116,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@ArneKr](https://github.com/ArneKr/)
-* [@Bgruening](https://github.com/Bgruening/)
-* [@Daler](https://github.com/Daler/)
-* [@FrodePedersen](https://github.com/FrodePedersen/)
-* [@Jdblischak](https://github.com/Jdblischak/)
-* [@Johanneskoester](https://github.com/Johanneskoester/)
-* [@MathiasHaudgaard](https://github.com/MathiasHaudgaard/)
+* [@conda-forge/r](https://github.com/conda-forge/r/)
 
