@@ -1,11 +1,11 @@
-About r-ggm
-===========
+About r-ggm-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-ggm-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=ggm
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-ggm-feedstock/blob/main/LICENSE.txt)
 
 Summary: Functions and datasets for maximum likelihood fitting of some classes of graphical Markov models.
 
