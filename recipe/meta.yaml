@@ -1,4 +1,4 @@
-{% set version = '2.3' %}
+{% set version = "2.5.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,36 +10,44 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ggm_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ggm/ggm_{{ version }}.tar.gz
-  sha256: 832ffe81ff87c6f1a6644e689ebbfb172924b4c4584ac8108d1244d153219ed8
+  sha256: 6fbbbb81bbdb408f99196d19486b542778607acf169bd1ee1ba3e73a5205e0ae
 
 build:
+  merge_build_host: True  # [win]
+  number: 0
   noarch: generic
-  number: 1004
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
+  build:
+    - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
+    - r-biocmanager
+    - r-graph
     - r-igraph
   run:
     - r-base
+    - r-biocmanager
+    - r-graph
     - r-igraph
 
 test:
   commands:
-    - $R -e "library('ggm')"  # [not win]
+    - $R -e "library('ggm')"           # [not win]
     - "\"%R%\" -e \"library('ggm')\""  # [win]
 
 about:
   home: https://CRAN.R-project.org/package=ggm
-  license: GPL-2.0-or-later
-  summary: Functions and datasets for maximum likelihood fitting of some classes of graphical
-    Markov models.
-  license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license: GPL-2.0-only
+  summary: Functions and datasets for maximum likelihood fitting of some classes of graphical Markov models.
+  license_family: GPL2
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
-   recipe-maintainers:
+  recipe-maintainers:
     - conda-forge/r
